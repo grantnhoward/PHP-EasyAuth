@@ -1,4 +1,4 @@
-EasyAuth uses phpass as its hashing mechanism, details can be found here: http://www.openwall.com/phpass/
+EasyAuth uses PhPass as its hashing mechanism, details can be found here: http://www.openwall.com/phpass/
 
 SQL for creating the test table is under sql/testing_db.sql
 

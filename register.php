@@ -15,7 +15,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link href="/css/style.css?v=<?php echo STATIC_VERSION;?>" rel="stylesheet" type="text/css" />
+	<link href="/view/css/style.css?v=<?php echo STATIC_VERSION;?>" rel="stylesheet" type="text/css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" ></script>
 	
 	<script type="text/javascript">
@@ -26,19 +26,19 @@
 		  
 		  $('#username').blur(function() {
 			    var t = this; 
-			    validateUsername.removeClass('error').removeClass('success').html('<img src="images/ajax.gif" height="16" width="16" /> validating...');
+			    validateUsername.removeClass('error').removeClass('success').html('<img src="/view/images/ajax.gif" height="16" width="16" /> validating...');
 			      
 		        $.ajax({
-		          url: 'util/ajax.php',
+		          url: 'src/util/ajax.php',
 		          data: 'action=checkUsername&username=' + t.value,
 		          dataType: 'json',
 		          type: 'post',
 		          success: function (j) {
 		            if(j.ok){
-		            	validateUsername.html('<img src="/images/accept.png"/>').removeClass('error').addClass('success');
+		            	validateUsername.html('<img src="/view/images/accept.png"/>').removeClass('error').addClass('success');
 		            }
 		            else{
-		            	validateUsername.html('<img src="/images/exclamation.png"/> '+j.msg).removeClass('success').addClass('error');
+		            	validateUsername.html('<img src="/view/images/exclamation.png"/> '+j.msg).removeClass('success').addClass('error');
 		            }
 		          }
 		        });
@@ -47,10 +47,10 @@
 
 		  $('#password').blur(function(){
 	          if(this.value.match("(?=^.{6,}$)")){
-	          	validatePw.html('<img src="/images/accept.png"/>').removeClass('error').addClass('success');
+	          	validatePw.html('<img src="/view/images/accept.png"/>').removeClass('error').addClass('success');
 	          }
 	          else{
-	          	validatePw.html('<img src="/images/exclamation.png"/> Minimum 6 characters.').removeClass('success').addClass('error');
+	          	validatePw.html('<img src="/view/images/exclamation.png"/> Minimum 6 characters.').removeClass('success').addClass('error');
 	          }
 	
 		  });
@@ -58,19 +58,19 @@
 	
 		  $('#email').blur(function() {
 			    var t = this; 
-			    validateEmail.removeClass('error').removeClass('success').html('<img src="images/ajax.gif" height="16" width="16" /> checking accounts...');
+			    validateEmail.removeClass('error').removeClass('success').html('<img src="/view/images/ajax.gif" height="16" width="16" /> checking accounts...');
 			      
 		        $.ajax({
-		          url: 'util/ajax.php',
+		          url: 'src/util/ajax.php',
 		          data: 'action=checkEmail&email=' + t.value,
 		          dataType: 'json',
 		          type: 'post',
 		          success: function (j) {
 		            if(j.ok){
-		            	validateEmail.html('<img src="/images/accept.png"/>').removeClass('error').addClass('success');
+		            	validateEmail.html('<img src="/view/images/accept.png"/>').removeClass('error').addClass('success');
 		            }
 		            else{
-		            	validateEmail.html('<img src="/images/exclamation.png"/> '+j.msg).removeClass('success').addClass('error');
+		            	validateEmail.html('<img src="/view/images/exclamation.png"/> '+j.msg).removeClass('success').addClass('error');
 		            }
 		          }
 		        });
@@ -84,7 +84,7 @@
 	<?php include ELEMENTS.'/nav.php'; ?>
 		<h1>Create New Account</h1>
 		
-		<form id="signup" method="post" action="actions/register.php">
+		<form id="signup" method="post" action="src/actions/register.php">
 			<?php echo show_errors($results); ?>
 
     		<label for="username">Username\Login:</label> <br/>

@@ -1,8 +1,11 @@
+<?php
+	include_once $_SERVER['DOCUMENT_ROOT'].'/globals.php';
+?>
 <!doctype html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<link href="/css/style.css?v=<?php echo STATIC_VERSION;?>" rel="stylesheet" type="text/css" />
+	<link href="/view/css/style.css?v=<?php echo STATIC_VERSION;?>" rel="stylesheet" type="text/css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" ></script>
 </head>
 

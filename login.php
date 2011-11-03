@@ -18,14 +18,14 @@ session_destroy();
 <html>
 <head>
 	<meta charset="utf-8">
-	<link href="/css/style.css?v=<?php echo STATIC_VERSION;?>" rel="stylesheet" type="text/css" />
+	<link href="/view/css/style.css?v=<?php echo STATIC_VERSION;?>" rel="stylesheet" type="text/css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" ></script>
 </head>
 <body>
 	<div id="wrapper">
 	<?php include ELEMENTS.'/nav.php'; ?>
 	<h1>Login</h1>
-	<form name="login" method="post" action="actions/login.php">
+	<form name="login" method="post" action="src/actions/login.php">
 	<?php echo show_errors($action); ?>
 		<div>
     		<label for="username">Username\Login:</label> <br/>

@@ -9,7 +9,7 @@ $user = $_SESSION['user'];
 <html>
 <head>
 	<meta charset="utf-8">
-	<link href="/css/style.css?v=<?php echo STATIC_VERSION;?>" rel="stylesheet" type="text/css" />
+	<link href="/view/css/style.css?v=<?php echo STATIC_VERSION;?>" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div id="wrapper">
